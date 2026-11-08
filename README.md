@@ -1,3 +1,11 @@
+<!-- tacitus-fork-status -->
+> **Retained upstream research fork.** The original project is [memvid/memvid](https://github.com/memvid/memvid).
+> This fork is preserved for inspection and evaluation. Benchmark or performance
+> claims in the upstream README below are upstream results, not new measurements
+> of this fork. No model evaluation or hosted acceptance was run in this review.
+> Original authorship and license terms remain in place.
+<!-- /tacitus-fork-status -->
+
 <!-- HEADER:START -->
 <img width="2000" height="524" alt="Social Cover (9)"
      src="https://github.com/user-attachments/assets/cf66f045-c8be-494b-b696-b8d7e4fb709c" />
