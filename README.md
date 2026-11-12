@@ -49,7 +49,6 @@
   <a href="https://discord.gg/7RUve6Zrrv"><img src="https://img.shields.io/discord/1442910055233224745?style=flat-square&logo=discord&label=discord" alt="Discord" /></a>
 </p>
 
-
 ## Benchmark Highlights
 
 **🚀 Higher accuracy than any other memory system :** +35% SOTA on LoCoMo, best-in-class long-horizon conversational recall & reasoning
@@ -59,7 +58,6 @@
 **⚡ Ultra-low latency at scale** 0.025ms P50 and 0.075ms P99, with 1,372× higher throughput than standard
 
 **🔬 Fully reproducible benchmarks:** LoCoMo (10 × ~26K-token conversations), open-source eval, LLM-as-Judge
-
 
 ## What is Memvid?
 
@@ -87,7 +85,6 @@ This frame-based design enables:
 
 The result is a single file that behaves like a rewindable memory timeline for AI systems.
 
-
 ## Core Concepts
 
 -   **Living Memory Engine**
@@ -105,7 +102,6 @@ The result is a single file that behaves like a rewindable memory timeline for A
 -   **Codec Intelligence**
     Auto-selects and upgrades compression over time.
 
-
 ## Use Cases
 
 Memvid is a portable, serverless memory layer that gives AI agents persistent memory and fast recall. Because it's model-agnostic, multi-modal, and works fully offline, developers are using Memvid across a wide range of real-world applications.
@@ -121,7 +117,6 @@ Memvid is a portable, serverless memory layer that gives AI agents persistent me
 -   Medical, Legal, and Financial Agents
 -   Auditable and Debuggable AI Workflows
 -   Custom Applications
-
 
 ## SDKs & CLI
 
@@ -170,7 +165,6 @@ Enable features as needed:
 [dependencies]
 memvid-core = { version = "2.0", features = ["lex", "vec", "temporal_track"] }
 ```
-
 
 ## Quick Start
 
@@ -315,6 +309,22 @@ cargo run --example test_whisper --features whisper -- /path/to/audio.mp3
 
 ```bash
 # Default (FP32 small, highest accuracy)
+
+<!-- tacitus-practical-entry -->
+## Purpose, code and a playable introduction
+
+Evaluate portable memory storage as a candidate evidence-retrieval component while preserving document versions and exact quotation locators.
+
+**Upstream evaluation fork.** Upstream Memvid fork. It is not installed as the TACITUS system of record; independent corruption, migration and retrieval tests remain necessary.
+
+[Setup, code walkthrough, research & verification](TACITUS_GUIDE.md) · [Play the original 8-bit teaching adventure](tacitus-demo/index.html) · [Demo credits](tacitus-demo/CREDITS.md)
+
+![The original House of Evidence teaching adventure; synthetic case, separate from this project’s runtime](tacitus-demo/mansion.png)
+
+Research: [RAG](https://arxiv.org/abs/2005.11401), [long-context evidence use](https://arxiv.org/abs/2307.03172), [GraphRAG](https://arxiv.org/abs/2404.16130). [What TACITUS borrows, adds and still needs to measure](https://github.com/sargonxg/sargonxg/blob/main/docs/RESEARCH_AND_DESIGN.md).
+<!-- /tacitus-practical-entry -->
+
+
 cargo run --example test_whisper --features whisper -- audio.mp3
 
 # Quantized tiny (75% smaller, faster)
@@ -339,7 +349,6 @@ let transcriber = WhisperTranscriber::new(&config)?;
 let result = transcriber.transcribe_file("audio.mp3")?;
 println!("{}", result.text);
 ```
-
 
 ## Text Embedding Models
 
@@ -428,8 +437,6 @@ mem.set_vec_model("bge-small-en-v1.5")?;
 
 This binding is persistent. Once set, future attempts to use a different model name will fail fast with a `ModelMismatch` error.
 
-
-
 ## API Embeddings (OpenAI)
 
 The `api_embed` feature enables cloud-based embedding generation using OpenAI's API.
@@ -470,8 +477,6 @@ let embedder = OpenAIEmbedder::new(config)?;
 
 See `examples/openai_embedding.rs` for a complete example.
 
-
-
 ## File Format
 
 Everything lives in a single `.mv2` file:
@@ -497,8 +502,6 @@ Everything lives in a single `.mv2` file:
 No `.wal`, `.lock`, `.shm`, or sidecar files. Ever.
 
 See [MV2_SPEC.md](MV2_SPEC.md) for the complete file format specification.
-
-
 
 ## Support
 
