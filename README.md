@@ -310,6 +310,9 @@ cargo run --example test_whisper --features whisper -- /path/to/audio.mp3
 ```bash
 # Default (FP32 small, highest accuracy)
 
+<details>
+<summary>TACITUS evaluation scope and optional original 8-bit teaching companion</summary>
+
 <!-- tacitus-practical-entry -->
 ## Purpose, code and a playable introduction
 
@@ -323,6 +326,8 @@ Evaluate portable memory storage as a candidate evidence-retrieval component whi
 
 Research: [RAG](https://arxiv.org/abs/2005.11401), [long-context evidence use](https://arxiv.org/abs/2307.03172), [GraphRAG](https://arxiv.org/abs/2404.16130). [What TACITUS borrows, adds and still needs to measure](https://github.com/sargonxg/sargonxg/blob/main/docs/RESEARCH_AND_DESIGN.md).
 <!-- /tacitus-practical-entry -->
+
+</details>
 
 
 cargo run --example test_whisper --features whisper -- audio.mp3
